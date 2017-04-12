@@ -3,9 +3,9 @@ import io from 'socket.io-client';
 import ChatWindow from './ChatWindow';
 
 const port = process.env.PORT || 3000;
-//const server = `http://localhost:${port}`;
-const server2 = 'https://tailbud-pr-17.herokuapp.com/';
-const socket = io(server2);
+const server = process.env.URL || `http://localhost:${port}`;
+// const server = 'https://tailbud-pr-17.herokuapp.com/';
+const socket = io(server);
 
 class Chat extends React.Component {
   constructor(props) {

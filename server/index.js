@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000;
 
+
 // Middleware
 app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, '../client')));
